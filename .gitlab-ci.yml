@@ -1,0 +1,35 @@
+stages:
+  - lint
+  - test
+  - build
+
+lint:
+  stage: lint
+  image: node:18
+  script:
+    - npm install
+    - npm run lint
+  rules:
+    - exists:
+        - '*.js'
+        - '*.css'
+
+test:
+  stage: test
+  image: node:18
+  script:
+    - npm install
+    - npm run test:jest
+  rules:
+    - exists:
+        - '*.js'
+
+build:
+  stage: build
+  image: node:18
+  script:
+    - npm install
+    - npm run build
+  rules:
+    - exists:
+        - 'package.json'
