@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component should render component properly 1`] = `
+[
+  <div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    style={
+      {
+        "bottom": 16,
+        "left": 16,
+        "marginTop": "7vh",
+        "pointerEvents": "none",
+        "position": "fixed",
+        "right": 16,
+        "top": 16,
+        "zIndex": 9999,
+      }
+    }
+  />,
+  <div
+    className="css-101v4nw-App"
+  >
+    <h2>
+      Clickify boilerplate
+    </h2>
+    <img
+      src=""
+    />
+    <nav
+      className="css-1kypvp2-Router"
+    >
+      <b>
+        Routing: 
+      </b>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Test route
+      </a>
+    </nav>
+    <p
+      className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+    >
+       
+      Hello there
+    </p>
+  </div>,
+]
+`;
