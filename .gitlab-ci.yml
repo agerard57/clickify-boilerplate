@@ -11,8 +11,8 @@ lint:
     - npm run lint
   rules:
     - exists:
-        - '*.js'
-        - '*.css'
+        - "*.js"
+        - "*.css"
 
 test:
   stage: test
@@ -22,7 +22,7 @@ test:
     - npm run test:jest
   rules:
     - exists:
-        - '*.js'
+        - "*.js"
 
 build:
   stage: build
@@ -32,4 +32,4 @@ build:
     - npm run build
   rules:
     - exists:
-        - 'package.json'
+        - "package.json"

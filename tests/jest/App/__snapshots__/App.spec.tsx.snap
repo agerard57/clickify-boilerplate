@@ -19,7 +19,7 @@ exports[`App component should render component properly 1`] = `
     }
   />,
   <div
-    className="css-101v4nw-App"
+    className="css-1os5uqi-App"
   >
     <h2>
       Clickify boilerplate
@@ -41,9 +41,8 @@ exports[`App component should render component properly 1`] = `
       </a>
     </nav>
     <p
-      className="MuiTypography-root MuiTypography-body1 css-ndaqpv-MuiTypography-root"
+      className="MuiTypography-root MuiTypography-body1 css-1vrh5xw-MuiTypography-root"
     >
-       
       Hello there
     </p>
   </div>,
