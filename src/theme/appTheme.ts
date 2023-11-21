@@ -2,19 +2,11 @@ import { colorPalette } from "./colorPalette";
 
 export const appTheme = {
   app: {
-    core: {},
-    testPage: {
-      textColor: colorPalette.blue,
+    core: {
+      navbar: {
+        background: colorPalette.white,
+      },
+      highlightedText: `linear-gradient(45deg, ${colorPalette.blueGradient.from} 100%, ${colorPalette.blueGradient.to} 100%)`,
     },
   },
-};
-
-declare module "@mui/material" {
-  interface Theme {
-    app: typeof appTheme.app;
-  }
-
-  interface ThemeOptions {
-    app?: typeof appTheme.app;
-  }
-}
+} as const;

@@ -1,1 +1,1 @@
-export { Router } from "./Router";
+export { AuthStatuses, Pages } from "./typings";

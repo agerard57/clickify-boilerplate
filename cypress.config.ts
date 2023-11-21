@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { defineConfig } from "cypress";
 
 export default defineConfig({
@@ -6,10 +7,10 @@ export default defineConfig({
     baseUrl: "http://localhost:8080",
     supportFile: false,
     fixturesFolder: false,
-    downloadsFolder: "./tests/cypress/downloads",
-    screenshotsFolder: "./tests/cypress/screenshots",
-    videosFolder: "./tests/cypress/video",
-    specPattern: "./tests/cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
+    downloadsFolder: "./cypress/downloads",
+    screenshotsFolder: "./cypress/screenshots",
+    videosFolder: "./cypress/video",
+    specPattern: "./cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
     video: false,
   },
 });

@@ -1,0 +1,88 @@
+{
+  "folders": [
+    { "name": "🧭 - Common", "path": "./node_modules/@clickify/clickify-common/src" },
+    {
+      "name": "🌟 - Core",
+      "path": "./src/core"
+    },
+    {
+      "name": "🔐 - App constants",
+      "path": "./src/constants/assets"
+    },
+    {
+      "name": "🖌️ - Theming",
+      "path": "./src/theme"
+    },
+    {
+      "name": "🌲 - Root",
+      "path": "."
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "davidanson.vscode-markdownlint",
+      "esbenp.prettier-vscode",
+      "wayou.vscode-todo-highlight",
+      "streetsidesoftware.code-spell-checker",
+      "streetsidesoftware.code-spell-checker-french",
+      "Orta.vscode-jest",
+      "vivaxy.vscode-conventional-commits",
+      "amazonwebservices.aws-toolkit-vscode",
+      "lokalise.i18n-ally"
+    ]
+  },
+  "settings": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "todohighlight.keywords": ["TODO", "FIX"],
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.tsc.autoDetect": "off",
+    "jest.disabledWorkspaceFolders": [
+      "📃 - Scripts",
+      "🌟 - Core",
+      "🔐 - App constants",
+      "🖌️ - Theming",
+      "🌲 - Root",
+      "🧭 - Common"
+    ],
+
+    "jest.showCoverageOnLoad": true,
+    "jest.coverageFormatter": "GutterFormatter",
+    "discord.enabled": true,
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[graphql]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "i18n-ally.localesPaths": ["enums"],
+    "i18n-ally.keystyle": "nested"
+  }
+}

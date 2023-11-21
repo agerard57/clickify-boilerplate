@@ -4,6 +4,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CircularDependencyPlugin = require("circular-dependency-plugin");
 
 module.exports = {
   entry: {
@@ -22,9 +23,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(ts|tsx)?$/,
         exclude: /node_modules/,
-        loader: "ts-loader",
+        use: {
+          loader: "ts-loader",
+        },
       },
       {
         test: /\.s(a|c)ss$/,
@@ -73,6 +76,19 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
+    }),
+    new CircularDependencyPlugin({
+      // exclude detection of files based on a RegExp
+      exclude: /a\.js|node_modules/,
+      // include specific files based on a RegExp
+      include: /src/,
+      // add errors to webpack instead of warnings
+      failOnError: true,
+      // allow import cycles that include an asyncronous import,
+      // e.g. via import(/* webpackMode: "weak" */ './file.js')
+      allowAsyncCycles: false,
+      // set the current working directory for displaying module paths
+      cwd: process.cwd(),
     }),
   ],
 };

@@ -17,5 +17,5 @@
     "types": ["jest", "node"]
   },
   "include": ["src", "index.d.ts"],
-  "exclude": ["node_modules", "dist", "./tests/cypress", "./cypress.config.ts"]
+  "exclude": ["node_modules", "dist", "./cypress", "./cypress.config.ts", "src/models", "src/graphql", "src/API.ts"]
 }

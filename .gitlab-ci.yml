@@ -3,12 +3,19 @@ stages:
   - test
   - build
 
+variables:
+  NPM_CACHE_KEY: "$CI_COMMIT_REF_NAME"
+
 lint:
   stage: lint
-  image: node:18
+  image: node:16
   script:
     - npm install
     - npm run lint
+  cache:
+    key: "$NPM_CACHE_KEY"
+    paths:
+      - node_modules/
   rules:
     - exists:
         - "*.js"
@@ -16,20 +23,26 @@ lint:
 
 test:
   stage: test
-  image: node:18
+  image: node:16
   script:
     - npm install
     - npm run test:jest
+  cache:
+    key: "$NPM_CACHE_KEY"
+    paths:
+      - node_modules/
   rules:
     - exists:
         - "*.js"
 
 build:
   stage: build
-  image: node:18
+  image: node:16
   script:
     - npm install
     - npm run build
   rules:
-    - exists:
-        - "package.json"
+    - if: '$CI_COMMIT_REF_NAME == "master"'
+  artifacts:
+    paths:
+      - dist/

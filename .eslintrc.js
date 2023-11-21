@@ -35,17 +35,14 @@ module.exports = {
     "prettier",
   ],
   rules: {
-    indent: ["error", 2],
+    indent: "off",
+    "no-nested-ternary": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
     "react/no-unknown-property": ["error", { ignore: ["css"] }],
     "react/display-name": "off",
     "import/prefer-default-export": "off",
     "import/extensions": "off",
     "react/react-in-jsx-scope": "off",
-    "import/no-internal-modules": [
-      "error",
-      {
-        allow: ["emotion/react"],
-      },
-    ],
   },
 };
