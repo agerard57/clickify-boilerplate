@@ -1,5 +1,5 @@
-import { i18n as Core } from "@/core";
-import { i18n as LandingPage } from "@/landingPage";
+import { Core } from "@/core/i18n";
+import { LandingPage } from "@/landingPage/i18n";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Modules = Record<string, { fr: Record<string, any>; en: Record<string, any> }>;
